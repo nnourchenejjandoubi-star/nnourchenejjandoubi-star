@@ -62,6 +62,9 @@
         <article class="project-card" data-category="automatique" tabindex="0" role="button" aria-label="Détails du moteur Feedback">
           <div class="project-image image-control"><span class="image-label">SIMULATION</span></div>
           <div class="project-content"><p class="project-type">AUTOMATIQUE · SIMULINK</p><h3>Contrôle-commande moteur Feedback</h3><p>Modélisation et simulation d'un contrôleur analogique, puis optimisation de la boucle fermée.</p><div class="chips"><span>MATLAB</span><span>Simulink</span><span>Régulation</span></div><span class="card-arrow">↗</span></div>
+        <article class="project-card" data-category="automatique" tabindex="0" role="button" aria-label="Détails du refroidisseur automatisé">
+          <div class="project-image image-cooler"><span class="image-label">INSTRUMENTATION</span></div>
+          <div class="project-content"><p class="project-type">PROJET UNIVERSITAIRE · INSTRUMENTATION</p><h3>Refroidisseur automatisé</h3><p>Pilotage d’un refroidisseur avec une carte d’acquisition sous LabVIEW, en signaux analogiques et numériques.</p><div class="chips"><span>LabVIEW</span><span>Acquisition</span><span>Instrumentation</span></div><span class="card-arrow">↗</span></div>
         </article>
       </div>
       <p class="project-hint">Sélectionne une carte pour afficher le résumé du projet.</p>
@@ -80,11 +83,13 @@
     <section class="section experience-section" id="experience">
       <div class="section-heading"><div><p class="eyebrow">APPRENDRE SUR LE TERRAIN</p><h2>Expériences &amp; <em>distinctions</em></h2></div></div>
       <div class="experience-grid">
-        <article class="info-card"><div class="card-photo" data-photo="stage" hidden></div><span class="card-icon">✦</span><p class="eyebrow">EXPÉRIENCE PROFESSIONNELLE</p><h3>Stage — Service technique hospitalier</h3><p>Découverte et suivi d'équipements électroniques en environnement hospitalier.</p><ul><li>Maintenance corrective et préventive.</li><li>Tests et validation en conditions réelles.</li><li>Observation de l'installation d'un scanner biplan.</li><li>Découverte d'une interface de supervision centralisée.</li></ul><a class="doc-link" data-doc="stage" href="documents/stage.pdf" target="_blank" rel="noopener" hidden>📄 Lire mon rapport de stage (PDF)</a></article>
-        <article class="info-card award-card"><div class="card-photo" data-photo="nasa" hidden></div><span class="card-icon">✧</span><p class="eyebrow">DISTINCTION</p><h3>NASA Space Apps Challenge 2026</h3><p class="award-title">1er prix de l'événement local de Besançon</p><p>Participation au projet 0G Health au sein d'une équipe de six personnes : suivi de la santé des astronautes en mission longue durée.</p><div class="award-stamp">1<small>ER PRIX</small></div></article>
+        <article class="info-card stage-card"><div class="card-photo" data-photo="stage" hidden></div><span class="card-icon">✦</span><p class="eyebrow">EXPÉRIENCE PROFESSIONNELLE</p><h3>Stagiaire en maintenance et équipements biomédicaux</h3><p class="stage-place">Hôpital Militaire de Tunis, Tunisie</p><ul><li>Participation à l’installation du premier scanner à deux tubes à rayons X en Afrique.</li><li>Participation aux vérifications et aux tests de fonctionnement du scanner.</li><li>Découverte des technologies d’imagerie médicale et des systèmes électroniques associés.</li><li>Participation aux tests techniques et aux diagnostics dans plusieurs services de l’hôpital.</li><li>Contrôle et vérification d’équipements électriques et électroniques.</li><li>Observation et analyse de dysfonctionnements de dispositifs médicaux.</li><li>Maintenance préventive et corrective aux côtés des techniciens.</li><li>Découverte des systèmes de contrôle, des circuits électroniques et des installations techniques hospitalières.</li></ul><p class="stage-skills"><b>Compétences :</b> maintenance préventive et corrective, diagnostic de dispositifs médicaux, contrôle d’équipements électriques et électroniques, imagerie médicale, installations techniques hospitalières.</p><a class="doc-link" data-doc="stage" href="documents/stage.pdf" target="_blank" rel="noopener" hidden>📄 Lire mon rapport de stage (PDF)</a></article>
+        <article class="info-card award-card"><div class="card-photo" data-photo="nasa" hidden></div><span class="card-icon">✧</span><p class="eyebrow">DISTINCTION</p><h3>NASA Space Apps Challenge 2026</h3><p class="award-title">1er prix de l'événement local de Besançon</p><p>Participation au projet 0G Health au sein d'une équipe de six personnes : suivi de la santé des astronautes en mission longue durée.</p><a class="doc-link" href="https://mikolajkurek.github.io/Baseline/" target="_blank" rel="noopener">🔗 Voir le projet de l’équipe</a><div class="award-stamp">1<small>ER PRIX</small></div></article>
         <article class="info-card"><div class="card-photo" data-photo="astra" hidden></div><span class="card-icon">⌘</span><p class="eyebrow">ENGAGEMENT ASSOCIATIF</p><h3>Membre d'ASTRA-FC</h3><p>Association étudiante autour de la robotique, de l'aérospatiale, de la recherche et des technologies spatiales.</p><p class="small-note">Ateliers techniques · Projets collectifs · Culture scientifique</p></article>
       </div>
     </section>
+
+    <section class="section tp-section" hidden><div class="section-heading"><div><p class="eyebrow">TRAVAUX PRATIQUES</p><h2>Comptes rendus de <em>TP</em></h2></div></div><div class="tp-grid" id="tpGrid"></div></section>
 
     <section class="section details-section">
       <div class="details-grid">
@@ -98,6 +103,6 @@
   </main>
   <footer><a class="brand" href="#accueil"><span class="brand-mark">N</span><span>Nourchene <b>Jendoubi</b></span></a><span>© 2026 Nourchene Jendoubi · Portfolio personnel</span><a href="#accueil">Retour en haut ↑</a></footer>
 
-  <dialog class="project-dialog" id="projectDialog"><button class="dialog-close" aria-label="Fermer">×</button><img class="dialog-photo" id="dialogPhoto" alt="" hidden><p class="eyebrow" id="dialogType"></p><h2 id="dialogTitle"></h2><p id="dialogDescription"></p><div class="chips" id="dialogChips"></div><div class="dialog-actions" id="dialogActions"></div></dialog>
+  <dialog class="project-dialog" id="projectDialog"><button class="dialog-close" aria-label="Fermer">×</button><div class="dialog-photos" id="dialogPhotos"></div><p class="eyebrow" id="dialogType"></p><h2 id="dialogTitle"></h2><div id="dialogDescription"></div><div class="chips" id="dialogChips"></div><div class="dialog-actions" id="dialogActions"></div></dialog>
   <script src="script.js"></script>
 </body></html>
