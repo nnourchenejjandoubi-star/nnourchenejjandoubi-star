@@ -49,11 +49,12 @@ sections.forEach(section=>observer.observe(section));
 /* Photos : dépose tes images dans le dossier images/ avec ces noms (jpg, jpeg, png ou webp) */
 const photoNames={'0G HEALTH':'0g-health','SÉCURITÉ AQUATIQUE':'brassard','COMMANDE VOCALE':'vehicule','CONCEPTION PCB':'carte-pcb','ROBOTIQUE & CONTRÔLE':'ev3','SIMULATION':'simulink'};
 function findImage(base,done){
-  const exts=['jpg','jpeg','png','webp'];
+  const exts=['jpg','jpeg','png','webp'], dirs=['images/',''];
+  const tries=[]; dirs.forEach(d=>exts.forEach(e=>tries.push(d+base+'.'+e)));
   (function next(i){
-    if(i>=exts.length) return;
-    const url='images/'+base+'.'+exts[i], img=new Image();
-    img.onload=()=>done(url); img.onerror=()=>next(i+1); img.src=url;
+    if(i>=tries.length) return;
+    const img=new Image();
+    img.onload=()=>done(tries[i]); img.onerror=()=>next(i+1); img.src=tries[i];
   })(0);
 }
 document.querySelectorAll('.project-card').forEach(card=>{
